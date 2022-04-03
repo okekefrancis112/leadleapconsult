@@ -1,43 +1,31 @@
+{% load static %}
 
-	<footer>
-		<div class="inner-footer">
-			<div class="container">
-				<div class="row">
-					
-					<div class="col-md-4 mx-auto f-contact">
-						<h3 class="widgetheading">Stay in touch</h3>
-						<a href= "mailto:dr.udu@gmail.com"><p><i class="fa fa-envelope"></i> ela-app@gmail.com</p></a>
-						<p><i class="fa fa-phone"></i>  07063419292,08089657753, 07033288348</p>
-						<p><i class=""></i> 
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- Footer starts here -->
 
-		<div class="last-div">
-			<div class="container">
-				<div class="row">
-					<div class="copyright">
-						© {%  now "Y" %} Ela App | <a> OTA</a>
-					</div>
-                    <!--
-                        All links in the footer should remain intact.
-                        Licenseing information is available at: http://bootstraptaste.com/license/
-                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Dewi
-                    
-					<nav class="foot-nav">
-						<ul>
-							<li><a href= "#">Home</a></li>
-							<li><a href= "#">Services</a></li>
-							<li><a href= "#">Blog</a></li>
-							<li><a href= "#">Portfolio</a></li>
-							<li><a href= "#">Contact</a></li>
-						</ul>
-					</nav>-->
-					<div class="clear"></div>
-				</div>
-			</div>
-			<a  class="scrollup" style="display: none;"><i class="fa fa-chevron-up"></i></a>
-		</div>
-	</footer>
+<footer id="footer">
+
+	<div class="contact">
+		<h3>Contact</h3>
+		<ul>
+			<li><span>Telephone: </span>+234-8108054165</li>
+			<li><span>Mobile: </span>+234-8062468296</li>
+			<li><span>Email: </span>leadleapconsult@gmail.com, 
+						</span>admin@leadleapconsult.com</li>
+		</ul>
+	</div>
+
+	<div class="copyright">
+		<p>Copyright|Lead-leap consulting © {%  now "Y" %}</p>
+	</div>
+
+	<div class="icons">
+		<img src="{% static "img/facebook.png" %}" alt="facebook">
+		<img src="{% static "img/twitter.png" %}" alt="twitter">
+		<a target="blank" href="https://www.linkedin.com/in/akerele-oluwasogo-glmp-mr-excel-11066710b"><img src="{% static "img/linkdin.png" %}" alt="linkdin"></a>
+		<img src="{% static "img/instagram.png" %}" alt="instagram">
+		<a target="blank" href="https://youtube.com/channel/UC1jyGuqYEA9CUpKLp89MUxw"><img src="{% static "img/youtube.png" %}" alt="linkdin"></a>
+	</div>
+
+</footer>
+
+<!-- Footer ends here -->

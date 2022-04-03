@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate
 class LoginForm(forms.Form):
     username = forms.CharField(label="Username")
     password = forms.CharField(widget=forms.PasswordInput())
+    
 
 class RegisterForm(forms.ModelForm):
     pick_your_course = forms.ModelChoiceField(queryset=AddCourses.objects.all())
@@ -52,14 +53,20 @@ class RegisterForm(forms.ModelForm):
 
 
 class RegisterUserForm(forms.ModelForm):
-    pick_your_course = forms.ModelChoiceField(queryset=AddCourses.objects.all())
-    company= forms.CharField(label="Company",required=False)
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+    username = forms.CharField(label="Username",required=False, widget=forms.TextInput(attrs={'placeholder':'Username'}))
+    full_name = forms.CharField(label="Full_name",required=False, widget=forms.TextInput(attrs={'placeholder':'Fullname'}))
+    email = forms.EmailField(label="Email",required=False, widget=forms.EmailInput(attrs={'placeholder':'Email'}))
+    mobile = forms.IntegerField(label="Mobile",required=False, widget=forms.TextInput(attrs={'placeholder':'Mobile'}))
+    sex = forms.CharField(label="Sex",required=False, widget=forms.TextInput(attrs={'placeholder':'Sex'}))
+    company = forms.CharField(label="Company",required=False, widget=forms.TextInput(attrs={'placeholder':'Company'}))
+    occupation = forms.CharField(label="Occupation",required=False, widget=forms.TextInput(attrs={'placeholder':'Occupation'}))
+    pick_your_course = forms.ModelChoiceField(queryset=AddCourses.objects.all(), empty_label="Pick your course", label="")
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder':'Password'}))
+    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput(attrs={'placeholder':'Confirm password'}))
     
     class Meta:
             model = MyUser
-            fields = ['username','full_name','email','mobile','sex','company','occupation','pick_your_course',]
+            fields = ['pick_your_course','username','full_name','email','mobile','sex','company','occupation',]
             # exclude = ('ip_address','created_at','updated_at','last_login','is_member','is_active','is_Paid_Member','is_admin')
        
 
@@ -153,17 +160,9 @@ class UserChangeForm(forms.ModelForm):
         return self.initial["password"]
 
 
-
-
-
-
-
-
-
-
 class LoginForm(forms.Form):
-    username = forms.CharField(label="Username")
-    password = forms.CharField(widget=forms.PasswordInput())
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Username'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={"placeholder":"Password"}))
 
 
 

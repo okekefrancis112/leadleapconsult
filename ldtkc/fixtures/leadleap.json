@@ -1,0 +1,330 @@
+[
+{
+    "model": "ldtkc.myuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$XqU1jwkltnid$DVhtx3LHMovyQ7EEt6W0citDW70DBDfh3avWjz4lT7I=",
+        "last_login": "2019-06-22T10:51:31Z",
+        "username": "texplode",
+        "email": "cub@gmail.com",
+        "ip_address": "ABC",
+        "mobile": "2347063419290",
+        "sex": "male",
+        "company": "tkc",
+        "occupation": "web developer",
+        "pick_your_course": "Web Development",
+        "start_course": "2019-03-31T12:18:51Z",
+        "full_name": "Temitayo Bakare",
+        "is_member": true,
+        "is_active": true,
+        "is_test_user": false,
+        "is_admin": true,
+        "is_head": false
+    }
+},
+{
+    "model": "ldtkc.myuser",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$mIs1OFCA2rcg$LwPyuX08rzg1WX/Go/mrp1zedOxzot36GvJ1jqIkS/A=",
+        "last_login": null,
+        "username": "Temitayo",
+        "email": "bakaretemitayo712@gmail.com",
+        "ip_address": "ABC",
+        "mobile": "23470634192",
+        "sex": "",
+        "company": "tkc",
+        "occupation": "accounting",
+        "pick_your_course": "Pick a Course",
+        "start_course": "2019-06-17T10:50:29.918Z",
+        "full_name": "Temitayo Bakare",
+        "is_member": false,
+        "is_active": true,
+        "is_test_user": false,
+        "is_admin": false,
+        "is_head": false
+    }
+},
+{
+    "model": "ldtkc.myuser",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$xVcQI9W6pr6K$Bkfq0XbD4ENg+WOUM/ozeS3ZKJZ9tzT1yZ88mgjDWfk=",
+        "last_login": "2019-06-22T11:28:20.515Z",
+        "username": "tayobakare",
+        "email": "contact@buyforfree.org",
+        "ip_address": "ABC",
+        "mobile": "2347063419292",
+        "sex": "male",
+        "company": "tkc",
+        "occupation": "accounting",
+        "pick_your_course": "Pick a Course",
+        "start_course": "2019-06-17T11:17:04Z",
+        "full_name": "Tayo Bakare",
+        "is_member": false,
+        "is_active": true,
+        "is_test_user": false,
+        "is_admin": false,
+        "is_head": false
+    }
+},
+{
+    "model": "ldtkc.myuser",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$ae8xw1KGAx6o$nSz8fzA/c/bDoG7pNxaIemLEGd/6QCb8F0Gja9qUhbg=",
+        "last_login": null,
+        "username": "tayoobakare",
+        "email": "contaact@buyforfree.org",
+        "ip_address": "ABC",
+        "mobile": "08064454321",
+        "sex": "",
+        "company": "tkc",
+        "occupation": "accounting",
+        "pick_your_course": "Pick a Course",
+        "start_course": "2019-06-17T11:20:49.660Z",
+        "full_name": "Tayoo Bakare",
+        "is_member": false,
+        "is_active": true,
+        "is_test_user": false,
+        "is_admin": false,
+        "is_head": false
+    }
+},
+{
+    "model": "ldtkc.myuser",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$B3gV9ky4VdDT$N6DZVca/xwPzznduE36hFXjjJZep8VLOYtUYAZifzPw=",
+        "last_login": "2021-12-26T09:47:44.593Z",
+        "username": "admin",
+        "email": "admin@gmail.com",
+        "ip_address": "ABC",
+        "mobile": null,
+        "sex": "",
+        "company": "",
+        "occupation": "",
+        "pick_your_course": "Pick a Course",
+        "start_course": "2021-12-19T15:18:57.814Z",
+        "full_name": "",
+        "is_member": false,
+        "is_active": true,
+        "is_test_user": false,
+        "is_admin": true,
+        "is_head": false
+    }
+},
+{
+    "model": "ldtkc.myuser",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$ocx9wWTMTy8c$6wYe+iR2+4TUgQE6lRRvAxswIb6XeCBKIwdVYIybXOE=",
+        "last_login": null,
+        "username": "Billions",
+        "email": "okeke98@gmail.com",
+        "ip_address": "127.0.0.1",
+        "mobile": "09034781941",
+        "sex": "M",
+        "company": "School",
+        "occupation": "Student",
+        "pick_your_course": "Python",
+        "start_course": "2021-12-19T15:31:38.207Z",
+        "full_name": "Francis Chukwudalu Okeke",
+        "is_member": false,
+        "is_active": true,
+        "is_test_user": false,
+        "is_admin": false,
+        "is_head": false
+    }
+},
+{
+    "model": "ldtkc.courses",
+    "pk": 1,
+    "fields": {
+        "user": 5,
+        "heading": "False",
+        "write_up": "<p>Physics</p>",
+        "outline": "",
+        "created_at": "2021-12-24T15:28:59.990Z",
+        "image": ""
+    }
+},
+{
+    "model": "ldtkc.courses",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "heading": "Python",
+        "write_up": "<p>Python</p>",
+        "outline": "",
+        "created_at": "2021-12-24T15:29:48.163Z",
+        "image": ""
+    }
+},
+{
+    "model": "ldtkc.addcourses",
+    "pk": 1,
+    "fields": {
+        "user": 5,
+        "title": "Python",
+        "created_at": "2021-12-24T15:36:03.744Z"
+    }
+},
+{
+    "model": "ldtkc.addcourses",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "title": "Physics",
+        "created_at": "2021-12-24T15:36:20.784Z"
+    }
+},
+{
+    "model": "ldtkc.addcourses",
+    "pk": 3,
+    "fields": {
+        "user": 6,
+        "title": "Mathematics",
+        "created_at": "2021-12-25T22:52:29.286Z"
+    }
+},
+{
+    "model": "ldtkc.testimonial",
+    "pk": 1,
+    "fields": {
+        "user": 6,
+        "created_at": "2021-12-24T20:58:54.755Z",
+        "name": "Frandal",
+        "testimonial": "True"
+    }
+},
+{
+    "model": "ldtkc.testimonial",
+    "pk": 2,
+    "fields": {
+        "user": 6,
+        "created_at": "2021-12-24T22:28:16.091Z",
+        "name": "lorem ipsum",
+        "testimonial": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
+},
+{
+    "model": "ldtkc.testimonial",
+    "pk": 3,
+    "fields": {
+        "user": 6,
+        "created_at": "2021-12-25T18:02:59.234Z",
+        "name": "Falset",
+        "testimonial": "Falset is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    }
+},
+{
+    "model": "ldtkc.satisfiedclient",
+    "pk": 4,
+    "fields": {
+        "user": 6,
+        "image": "media/satisfied_client/apple-intro_ivkc4z",
+        "created_at": "2021-12-26T10:04:33.706Z"
+    }
+},
+{
+    "model": "ldtkc.onlinevideo",
+    "pk": 1,
+    "fields": {
+        "title": "Excel chart",
+        "video": "https:/storage.googleapis.com/bezop-uploads/media/1550255671020_UFm6FDQ.mp4",
+        "description": "This is an excel chart"
+    }
+},
+{
+    "model": "ldtkc.onlinevideo",
+    "pk": 2,
+    "fields": {
+        "title": "Excel Macro",
+        "video": "https:/storage.googleapis.com/bezop-uploads/media/10296236_322787271209746_1720399828_n_hhMRHfk.mp4",
+        "description": "This is an excel macro"
+    }
+},
+{
+    "model": "ldtkc.onlinevideo",
+    "pk": 3,
+    "fields": {
+        "title": "Excel Pivot",
+        "video": "https:/storage.googleapis.com/bezop-uploads/media/1550853399847.mp4",
+        "description": "This is a pivot table for excel"
+    }
+},
+{
+    "model": "ldtkc.onlinevideo",
+    "pk": 4,
+    "fields": {
+        "title": "Large file",
+        "video": "https:/storage.googleapis.com/bezop-uploads/media/Introduction_to_Classes_and_Objects_-_Part_1_Data_Structures__Algorithms_3480p.mp4",
+        "description": "This is a large file test"
+    }
+},
+{
+    "model": "ldtkc.onlineclass",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "slug": "excelforbeginners",
+        "online_video": 1,
+        "title": "Excel For Beginners"
+    }
+},
+{
+    "model": "ldtkc.onlineclass",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "slug": "excelforbeginners",
+        "online_video": 2,
+        "title": "Excel For Beginners"
+    }
+},
+{
+    "model": "ldtkc.onlineclass",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "slug": "webdevelopment",
+        "online_video": 3,
+        "title": "Web Development"
+    }
+},
+{
+    "model": "ldtkc.testquestion",
+    "pk": 1,
+    "fields": {
+        "poster": 1,
+        "content": "What is Python?",
+        "timestamp": "2021-12-24T15:46:20.712Z"
+    }
+},
+{
+    "model": "ldtkc.testanswer",
+    "pk": 1,
+    "fields": {
+        "questions": 1,
+        "choice1": "2.0",
+        "choice2": "3.0",
+        "choice3": "1.0",
+        "choice4": "4.0",
+        "correct_answer": "2.0"
+    }
+},
+{
+    "model": "ldtkc.playerstatistic",
+    "pk": 1,
+    "fields": {
+        "player": 6,
+        "name": "Billions",
+        "department": "Student",
+        "company": "School",
+        "mobile": "09034781941",
+        "score": 5,
+        "timestamp": "2021-12-24T15:50:55.359Z"
+    }
+}
+]

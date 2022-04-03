@@ -7,7 +7,8 @@ from datetime import time
 from django.urls import reverse
 from django.contrib import messages
 from django.conf import settings
-from django.db import IntegrityError
+# from django.db import IntegrityError
+from django.core.exceptions import ValidationError
 from django.contrib.admin.views.decorators import staff_member_required
 from django.template.loader import render_to_string
 from .forms import LoginForm, RegisterForm,ProfileEditForm,RegisterUserForm
@@ -15,6 +16,7 @@ from .models import MyUser,Gallery,Courses,OnlineClass,OnlineVideo,Testimonial,S
 from django.contrib.messages import get_messages
 from django.http import JsonResponse
 import re
+
 # from django.contrib.auth.views import password_change
 # from django.contrib.auth.views import password_change_done
 # from django.contrib.auth.views import password_reset
@@ -179,7 +181,7 @@ def auth_logout(request):
 
 def dashboard(request,username):
     
-	user = get_object_or_404(MyUser,username=username)
+	user = get_object_or_404(MyUser,username=username) 
 	if not request.user.is_test_user:
 		course = OnlineClass.objects.all().distinct('title')
 		template = "leadtkc/dashboard.html"
@@ -213,9 +215,7 @@ def course_detail(request,username,course_title):
 		MyUser.objects.filter(username=username).update(is_member=False)
 		messages.error(request,'Sorry your viewing time has expired. Contact us for more information')
 		return render(request,template)
-
-	except:
-		
+	except:	
 		template = "leadtkc/video_detail.html"
 		context={'course':course,'course_title':course_title}
 		return render(request,template,context)
@@ -240,12 +240,6 @@ def get_ref_id(request):
 		get_ref_id()
 	except:
 		return ref_id
-
-
-
-
-
-
 
 @login_required
 def edit_studentprofile(request,username):
@@ -272,14 +266,6 @@ def edit_studentprofile(request,username):
 
 		#count=MyUser.objects.filter(friend=join_obj).count()
 	return render(request, 'leadtkc/edit_studentprofile.html', {'user':user,'user_form': user_form,'profile_form': profile_form})#"count"
-
-
-
-
-
-
-
-
 
 def auth_register(request):
 	course=Courses.objects.all()
@@ -324,8 +310,6 @@ def auth_register(request):
 					# context = {"testimonial":testimonial,"logos":logos,"resource":resource,"gallery":gallery,"register_form": register_form,"calendar":calendar,"course":course}
 					return render(request, "leadtkc/home.html", {"logos":logos,"add_course":add_course,"testimonial":testimonial,"logos":logos,"resource":resource,"gallery":gallery,"register_form": register_form,"calendar":calendar,"course":course})
 
-
-
 	else:
 		register_form=RegisterForm()
 
@@ -338,7 +322,7 @@ def user_test(request):
 		name = get_info.get("name")
 		email = get_info.get("email")
 		mobile = get_info.get("mobile")
-		company = get_info.get("company").lower()
+		company = get_info.get("company1").lower()
 		department = get_info.get("department").lower()
 		password = get_info.get("password")
 		result=[name,email,mobile,company,mobile,department]
@@ -361,8 +345,7 @@ def user_test(request):
 					else:
 						messages.error(request,"Invalid Input Details. Enter Valid Details.")
 						return render(request,'leadtkc/test/test_register.html')	
-			except IntegrityError as e:
-				
+			except ValidationError as e:				
 				error = e.args[0].split("=")[1]
 				messages.error(request,"{}".format(error))
 				return render(request,'leadtkc/test/test_register.html')
@@ -372,7 +355,6 @@ def user_test(request):
 		course_outline = AddCourses.objects.all()
 		crs = [re.sub('[^A-Za-z0-9]+','',"".join(course.title.split(" ")).lower()) for course in course_outline]
     			
-		# print(crs)
 		return render(request,'leadtkc/test/test_register.html')
 
 def submit_test(request,username):
@@ -439,6 +421,18 @@ def take_test(request,username):
 			return redirect(f"/test/{username}_testdashboard")
 		else:
 			return render(request,template,context)
+
+
+# def leadleap_test(request,username):
+# 		user=get_object_or_404(MyUser,username=username)
+# 		template ="leadtkc/test/leadleapTest.html"
+# 		context = {"user":user}
+# 		candidate = PlayerStatistic.objects.filter(player=user).count()
+# 		if candidate == 1:
+# 			messages.error(request,"You have taken this test before")
+# 			return redirect(f"/test/{username}_testdashboard")
+# 		else:
+# 			return render(request,template,context)
 
 
 def report(request,username):

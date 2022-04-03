@@ -70,6 +70,7 @@ $.ajax({
 
 
 function startTimer(duration, display) {
+  console.log('display1',display)
  
     let timer = duration, minutes, seconds;
     let get_total= document.querySelector(".score").innerHTML
@@ -84,7 +85,6 @@ t =  setInterval(function () {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
-
 
         function once(fn,context){
             var result;
@@ -105,8 +105,6 @@ t =  setInterval(function () {
             stopTimer()
            $(".result").show(1000);
             timer = duration;
-
-
             minutes = "";
             seconds = "";
 
@@ -172,12 +170,9 @@ const end_time= Math.floor(end/1000 % 60);
 
       }
     }
-
 });
 });
-scoreSaver(); 
-    
-            
+scoreSaver();           
         }
 
     }, 1000);

@@ -161,15 +161,6 @@ class Registeration(models.Model):
         return 'Registeration Status for  {}'.format(self.name)
 
 
-
-
-
-
-
-
-
-
-
 class PaymentStatus(models.Model):
     user = models.OneToOneField(MyUser,related_name="paypal_user",on_delete=models.CASCADE)
     pay33 = models.BooleanField(default=False)
@@ -179,10 +170,6 @@ class PaymentStatus(models.Model):
 
     def __str__(self):
         return 'Payment Status for  {}'.format(self.user.username)
-
-
-
-
 
 class Calendar(models.Model):
     user = models.ForeignKey(MyUser,related_name="calendar_user",on_delete=models.CASCADE)
