@@ -26,9 +26,6 @@
   max-height: 550px;
   padding: 0rem 2rem;
   overflow: scroll;
-  /* scroll-padding-top: 2vh; */
-  /* overflow: auto; */
-  /* transition: all 0.4s linear; */
   padding-bottom: 2rem;
 }
 
@@ -41,9 +38,7 @@
   border-radius: 2rem;
 }
 .form-register::-webkit-scrollbar-thumb {
-  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
   background-color: green;
-  /* background-image: linear-gradient(180deg, #D0368A 0%, #708AD4 99%); */
   box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
   border-radius: 2rem;
 }
@@ -55,10 +50,8 @@
   display: flex;
   flex-flow: column;
   min-width: 20rem;
-  /* max-height: 550px; */
   padding: 0rem 2rem;
   overflow: auto;
-  /* transition: all 0.4s linear; */
   padding-bottom: 2rem;
 }
 
@@ -135,7 +128,6 @@
 
 .form-login {
   box-shadow: none;
-  /* position: absolute; */
 }
 
 .form-register .account {
@@ -168,16 +160,10 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
-  /* font-family: Montserrat; */
   color: seagreen;
   margin: 1rem auto;
   margin-bottom: 1rem;
 }
-
-/* .form-register {
-  opacity: 0;
-  pointer-events: none;
-} */
 
 .form-register .first-half,
 .second-half {
@@ -224,24 +210,14 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: 4rem solid white;
-  /* border-bottom: none; */
 }
-
-/* .form-register #div_id_email1{
-  outline: none;
-  height: 2.5rem;
-  border-radius: 20px;
-  padding: 0 1rem;
-  border: 1.8px solid rgb(48, 138, 63);
-  width: 100%;
-
-} */
 
 .form-register button[type="submit"],
 .form-login button {
-  height: 2.5rem;
+  margin: 0 auto;
   margin-top: 2rem;
-  min-width: 5rem;
+  width: max-content;
+  padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background: rgb(48, 138, 63);
   border: none;
