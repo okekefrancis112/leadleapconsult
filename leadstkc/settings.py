@@ -14,8 +14,8 @@ import os
 from decouple import config
 import dj_database_url
 import cloudinary
-import cloudinary_storage
-
+import cloudinary.uploader 
+import cloudinary.api
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -317,11 +317,12 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# Cloudinary stuff
+# Cloudinary Setup
 CLOUDINARY_URL=config('CLOUDINARY_URL')
 
 CLOUDINARY_STORAGE = {
@@ -330,7 +331,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': config('api_SECRET', default="")
 }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # LOGGING = {
